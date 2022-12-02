@@ -15,6 +15,9 @@
 # production
 /build
 
+#sanity
+/sanity-ghost/node_modules
+
 # misc
 .DS_Store
 *.pem
