@@ -1,9 +1,27 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router';
 import React from 'react'
 
-function Header() {
+interface Props {
+    bgColour?: string;
+}
+
+function Header({ bgColour }: Props) {
+    const router = useRouter();
+    const OurStory = () => {
+        router.push('/OurStory');
+    };
+
+    const Membership = () => {
+        router.push('/Membership');
+    }
+
+    const Write = () => {
+        router.push('/Write');
+    }
+
     return (
-        <div className="fixed inset-x-0 top-0 z-10 bg-ghost border-y  border-black">
+        <div className={`fixed inset-x-0 top-0 z-10 border-y  border-black`} style={{ backgroundColor: bgColour }}>
             <header className="flex justify-between p-5 max-w-7xl mx-auto">
                 <div className="flex items-center space-x-5">
                     <Link href="/" className='flex'>
@@ -16,11 +34,13 @@ function Header() {
                     </Link>
                 </div>
                 <div className="flex items-center space-x-3 ">
-                    <h3>About</h3>
-                    <h3>Contact</h3>
-                    <h3>Follow</h3>
-                    <h3>Sign In</h3>
-                    <h3 className="text-white px-4 py-1  rounded-full bg-black">Get Started</h3>
+                    <button onClick={OurStory}>Our Story</button>
+                    <button onClick={Membership}>Membership</button>
+                    <button onClick={Write}>Write</button>
+                    <Link href="#posts">
+                        <button className="text-white px-4 py-1  rounded-full bg-black/90 hover:bg-black">Get Started</button>
+                    </Link>
+
                 </div>
             </header>
         </div>

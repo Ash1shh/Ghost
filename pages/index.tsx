@@ -13,8 +13,8 @@ export default function Home({ posts }: Props) {
   //console.log(posts);
   return (
     <>
-      <div className='bg-ghost h-96'>
-        <div className="max-w-7xl mx-auto">
+      <div className='bg-ghost h-[450px] border-y border-black'>
+        <div className="max-w-7xl mx-auto ">
           <Head>
             <title>Ghost</title>
             <link rel="icon" href="/favicon.ico" />
@@ -22,8 +22,8 @@ export default function Home({ posts }: Props) {
 
           <Header />
 
-          <div className='fle mx-0 mt-16 py-10 px-0 lg:py-0'>
-            <div className='py-10 px-2  space-x-5'>
+          <div className='flex mx-0 mt-16 py-10 px-0 lg:py-0'>
+            <div className='py-10 px-2 space-x-5'>
               <h1 className='text-7xl max-w-xl font-medium my-10 mx-5'>
                 PEEK-A-BOO!
               </h1>
@@ -31,14 +31,17 @@ export default function Home({ posts }: Props) {
                 Now I know what a ghost is. Unfinished business, that's what.
               </h2>
               <div className='flex'>
-                <h3 className="text-white mx-0 px-7 py-2 my-3 rounded-full bg-black font-sans w-1/
-            4">Start Haunting</h3>
+                <Link href="#posts">
+                  <button className="text-white mx-0 px-7 py-2 my-3 rounded-full bg-black/90 font-sans w-1/
+            4 hover:bg-black">Start Haunting</button>
+                </Link>
+
               </div>
             </div>
           </div>
 
           {/* posts */}
-          <div className="grid grid-cols-1 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3 my-2">
+          <div className="grid grid-cols-1 p-2 sm:grid-cols-2 md:gap-6 md:p-6 lg:grid-cols-3 my-2" id='posts'>
             {posts.map((post) => (
               <Link key={post._id} href={`/post/${post.slug.current}`}>
                 <div className="group cursor-pointer overflow-hidden rounded-lg border">
