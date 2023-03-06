@@ -29,7 +29,7 @@ export default async function handler(
         })
     } catch (error) {
         console.log(error)
-        return res.status(500).json({ message: 'Cound not submit comment', error })
+        return res.status(500).json({ message: 'Could not submit comment', error })
     }
     res.status(200).json({ message: 'Comment submitted' })
 }

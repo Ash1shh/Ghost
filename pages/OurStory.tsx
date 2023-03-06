@@ -31,15 +31,15 @@ function OurStory() {
                 </div>
 
                 <div className='flex items-center justify-center w-1/2'>
-                    <img 
-                    className='max-w-full'
-                    src="https://user-images.githubusercontent.com/87669361/222958558-8e2d4cb9-6366-4d06-a466-729a5dbfa7d1.gif" alt="" />
+                    <img
+                        className='max-w-full'
+                        src="https://user-images.githubusercontent.com/87669361/222958558-8e2d4cb9-6366-4d06-a466-729a5dbfa7d1.gif" alt="" />
                 </div>
             </div>
 
             <div className='flex items-center justify-center h-20'>
-                    <h1 className='text-5xl font-bold'>GHOST</h1>
-                </div>
+                <h1 className='text-5xl font-bold'>GHOST</h1>
+            </div>
 
         </div>
     );
